@@ -2,8 +2,14 @@ version: '3.5'
 
 services:
   ui:
+    image: edulint-web-react
     container_name: ui
     build: .
     ports:
       - "80:80"
     restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: dockerInternal
