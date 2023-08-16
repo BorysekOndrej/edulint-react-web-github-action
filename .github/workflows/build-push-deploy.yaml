@@ -58,5 +58,5 @@ jobs:
           script: |
             cd ${{ env.TARGET_FOLDER }}
             docker-compose pull
-            docker-compose docker-compose.yml up -d --build
+            docker-compose up -d --build
             echo "Successfully deployed, hooray!"
