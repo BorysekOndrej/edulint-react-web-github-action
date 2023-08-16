@@ -16,8 +16,8 @@ on:
         default: 'latest'
 
 env:
-  docker_label: "${{ inputs.docker_label || github.ref == 'refs/heads/main' && 'latest' || 'dev' }}"  # todo: maybe not main, but master?
-  TARGET_FOLDER: "${{ github.ref == 'refs/heads/main' && secrets.SSH_PROD_FOLDER || secrets.SSH_DEV_FOLDER }}"
+  docker_label: "${{ inputs.docker_label || github.ref == 'refs/heads/master' && 'latest' || 'dev' }}"  # todo: maybe not main, but master?
+  TARGET_FOLDER: "${{ github.ref == 'refs/heads/master' && secrets.SSH_PROD_FOLDER || secrets.SSH_DEV_FOLDER }}"
 
 
 jobs:
