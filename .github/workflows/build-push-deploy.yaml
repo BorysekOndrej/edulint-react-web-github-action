@@ -27,7 +27,7 @@ jobs:
       SSH_PROD_FOLDER: ""
       SSH_DEV_FOLDER: ""
     with:
-      TARGET_FOLDER: ${{ env.TARGET_FOLDER }}
+      TARGET_FOLDER: "/tmp"
 
 
 
