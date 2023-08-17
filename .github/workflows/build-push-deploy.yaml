@@ -2,9 +2,6 @@ name: Docker build, publish and deploy
 
 on:
   push:
-    branches:
-      - main
-      - dev
 
   workflow_dispatch:
     inputs:
