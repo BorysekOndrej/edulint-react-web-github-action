@@ -61,6 +61,5 @@ jobs:
 
   redeploy-full-stack:
     needs: docker-build-and-publish-image
-    call-workflow-passing-data:
-      uses: GiraffeReversed/edulint-web/blob/main/.github/workflows/deploy.yaml@${{ env.edulint_web_ref }}
+    uses: GiraffeReversed/edulint-web/blob/main/.github/workflows/deploy.yaml@${{ env.edulint_web_ref }}
 
