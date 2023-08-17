@@ -24,10 +24,10 @@ jobs:
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       SSH_KEY: ${{ secrets.SSH_KEY }}
-      SSH_PROD_FOLDER: ""
-      SSH_DEV_FOLDER: ""
+      SSH_PROD_FOLDER: ${{ secrets.SSH_PROD_FOLDER}}
+      SSH_DEV_FOLDER: ${{ secrets.SSH_DEV_FOLDER}}
     with:
-      TARGET_FOLDER: ${{ env.target_folder }}
+      # TARGET_FOLDER: ${{ env.target_folder }}
       BRANCH: "dev"  # github.ref_name
 
 
