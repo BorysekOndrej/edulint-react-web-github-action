@@ -19,7 +19,9 @@ env:
 jobs:
 
   redeploy-full-stack:
-    uses: GiraffeReversed/edulint-web/.github/workflows/deploy.yaml@dev
+    needs: docker-build-and-publish-image
+    steps:
+      - uses: GiraffeReversed/edulint-web/.github/workflows/deploy.yaml@dev
     secrets:
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
@@ -27,8 +29,7 @@ jobs:
       SSH_PROD_FOLDER: ${{ secrets.SSH_PROD_FOLDER}}
       SSH_DEV_FOLDER: ${{ secrets.SSH_DEV_FOLDER}}
     with:
-      # TARGET_FOLDER: ${{ env.target_folder }}
-      BRANCH: "dev"  # github.ref_name
+      BRANCH: ${{ github.ref_name }}
 
 
 
