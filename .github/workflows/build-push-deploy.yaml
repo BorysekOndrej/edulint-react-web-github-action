@@ -28,6 +28,7 @@ jobs:
       SSH_DEV_FOLDER: ""
     with:
       TARGET_FOLDER: "/tmp"
+      BRANCH_REF: "dev"
 
 
 
