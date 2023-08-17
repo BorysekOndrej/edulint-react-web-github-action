@@ -19,7 +19,7 @@ env:
 jobs:
 
   redeploy-full-stack:
-    uses: GiraffeReversed/edulint-web/.github/workflows/deploy.yaml@${{env.edulint_web_ref}}
+    uses: GiraffeReversed/edulint-web/.github/workflows/deploy.yaml@dev
     secrets:
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
