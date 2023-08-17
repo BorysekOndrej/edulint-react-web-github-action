@@ -20,7 +20,7 @@ jobs:
 
   redeploy-full-stack:
     uses: GiraffeReversed/edulint-web/.github/workflows/deploy.yaml@dev
-
+    secrets: inherit
 
 
 
