@@ -24,9 +24,10 @@ jobs:
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       SSH_KEY: ${{ secrets.SSH_KEY }}
-      SSH_PROD_FOLDER: ${{ secrets.SSH_PROD_FOLDER }}
-      SSH_DEV_FOLDER: ${{ secrets.SSH_DEV_FOLDER }}
-      
+      SSH_PROD_FOLDER: ""
+      SSH_DEV_FOLDER: ""
+    inputs:
+      TARGET_FOLDER: ${{ env.TARGET_FOLDER }}
 
 
 
